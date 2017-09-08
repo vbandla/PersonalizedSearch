@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="/css/bootstrap.css" />
+<link rel="stylesheet" href="/css/style.css" />
+
+</head>
+<body>
+ <a href="/users/logout">Logout</a>
+
+ <h2 class="page-header">Profile</h2>
+<p>Welcome to your profile dear  {{username}}  </p>  
+
+<a href="https://stackoverflow.com/questions/tagged/java?sort=frequent&pageSize=15" target="_blank">“stackoverflow tag=java"</a>
+
+<div id = "why">
+<h4><p><b>Why do you decide to log these actions?</b></p><br></h4>
+
+<p>1) action Question click - Can help understand what kind of Questions the user is interested in</p>
+<p>2) action Vote Up - Tells about the users liking an answer</p>
+<p>3) action Vote Down -Tells about the users disliking an answer </p>
+<p>4) action Post an Answer - Users knowledge about the question he is answering</p>
+<p>5) action add a comment – To ask for information regarding the question/answer or suggest an improvement</p>
+
+</div>
+
+<div id = "login-history">
+<h4><p><b> Dear  {{username}}  your login history</b></p><br> </h4>
+
+<table>
+{{#each time}}
+<tr><td>{{time}}</td></tr>
+{{/each}}
+</table>
+</div>
+
+<div id = " behavioral logs ">
+<h4><p><b> Dear  {{username}}  your logs on stackoverflow</b></p><br> </h4>
+<table>
+{{#each action}}
+<tr><td>{{this.action}}</td></tr>
+{{/each}}
+</table>
+</div>
+</body>
+</html>
